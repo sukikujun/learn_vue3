@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.prod.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-text="name" @click="add"></div>
+
+        <br>
+        <button @click="sub">Sub</button> {{ num }} <button @click="add">Plus</button>
+        <br>
+        <div v-if="error" style="background-color: red; color: white;">Tip: {{ error }}</div>
+
+        <!-- <a href="https://www.baidu.com" target="_blank" @click="go">Go!</a> -->
+        <!-- .修饰符 阻止默认行为 -->
+        <!-- <a href="https://www.baidu.com" target="_blank" @click.prevent="go">Go!</a> -->
+        <a href="https://www.baidu.com" target="_blank" @click.prevent="go($event, 'hihihi')">Go!</a>
+    </div>
+    <script src="12.js"></script>
+</body>
+
+</html>
