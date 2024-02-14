@@ -8,6 +8,7 @@ const app = Vue.createApp({
     },
     methods: {
         sub() {
+            this.error = ''
             if (this.num > 0) {
                 this.num--;
             } else {
@@ -15,6 +16,7 @@ const app = Vue.createApp({
             }
         },
         add() {
+            this.error = ''
             if (this.num < 10) {
                 this.num++;
             } else {
